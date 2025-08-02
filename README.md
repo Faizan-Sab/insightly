@@ -14,7 +14,7 @@ From your Frappe bench directory:
 ```bash
 # Clone the repo inside the apps directory
 cd apps
-git clone https://github.com/MeetSherasiya/insightly.git
+git clone https://github.com/Faizan-Sab/insightly
 
 # Install the app
 cd ..
