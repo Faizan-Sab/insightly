@@ -170,7 +170,7 @@ def get_sales_order_data(customer_code, start_date, end_date, details):
                     <th>Item Code</th>
                     <th>Item Name</th>
                     <th width="10%">Qty</th>
-                    <th width="10%">Pending Qty</th>
+                    <th width="20%">Pending Qty</th>
                     <th width="15%">Rate</th>
                     <th width="15%">Total Taxable Amount</th>
                 </tr>
@@ -217,7 +217,7 @@ def get_delivery_note_data(customer_code, start_date, end_date, details):
                 dni.item_code,
                 dni.item_name,
                 SUM(dni.qty) AS total_qty,
-                SUM(dni.rate) AS avg_rate,
+                AVG(dni.rate) AS avg_rate,
                 SUM(dni.amount) AS total_amount
             FROM `tabDelivery Note Item` dni
             JOIN `tabDelivery Note` dn ON dni.parent = dn.name
@@ -281,7 +281,7 @@ def get_sales_invoice_data(customer_code, start_date, end_date, details):
                 sii.item_code,
                 sii.item_name,
                 SUM(sii.qty) AS total_qty,
-                SUM(sii.rate) AS avg_rate,
+                AVG(sii.rate) AS avg_rate,
                 SUM(sii.amount) AS total_amount
             FROM `tabSales Invoice Item` sii
             JOIN `tabSales Invoice` si ON sii.parent = si.name
