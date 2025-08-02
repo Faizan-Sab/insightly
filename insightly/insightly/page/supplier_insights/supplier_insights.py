@@ -170,7 +170,7 @@ def get_purchase_order_data(supplier_code, start_date, end_date, details):
                     <th>Item Code</th>
                     <th>Item Name</th>
                     <th width="10%">Qty</th>
-                    <th width="10%">Pending Qty</th>
+                    <th width="20%">Pending Qty</th>
                     <th width="15%">Rate</th>
                     <th width="15%">Total Taxable Amount</th>
                 </tr>
@@ -217,7 +217,7 @@ def get_purchase_receipt_data(supplier_code, start_date, end_date, details):
                 pri.item_code,
                 pri.item_name,
                 SUM(pri.qty) AS total_qty,
-                SUM(pri.rate) AS avg_rate,
+                AVG(pri.rate) AS avg_rate,
                 SUM(pri.amount) AS total_amount
             FROM `tabPurchase Receipt Item` pri
             JOIN `tabPurchase Receipt` pr ON pri.parent = pr.name
@@ -281,7 +281,7 @@ def get_purchase_invoice_data(supplier_code, start_date, end_date, details):
                 pii.item_code,
                 pii.item_name,
                 SUM(pii.qty) AS total_qty,
-                SUM(pii.rate) AS avg_rate,
+                AVG(pii.rate) AS avg_rate,
                 SUM(pii.amount) AS total_amount
             FROM `tabPurchase Invoice Item` pii
             JOIN `tabPurchase Invoice` pi ON pii.parent = pi.name
