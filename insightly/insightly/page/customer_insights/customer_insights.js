@@ -127,8 +127,8 @@ frappe.pages['customer-insights'].on_page_load = function(wrapper) {
 			row.sales_order
 				? `Total Records: ${row.sales_order.total_records || 0}<br>
 				Total Order Qty: ${row.sales_order.total_qty || 0} Qty<br>
-				Total Taxable Amount: ₹${row.sales_order.total_taxable_amount || '0.00'}<br>
-				Total Amount: ₹${row.sales_order.total_amount || '0.00'}<br><br>
+				Total Taxable Amount: Rs.${row.sales_order.total_taxable_amount || '0.00'}<br>
+				Total Amount: Rs.${row.sales_order.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-customer="${row.customer_code}" 
 					data-doctype="Sales Order" 
@@ -144,8 +144,8 @@ frappe.pages['customer-insights'].on_page_load = function(wrapper) {
 			row.delivery_note 
 				? `Total Records: ${row.delivery_note.total_records || 0}<br>
 				Total Delivered Qty: ${row.delivery_note.total_qty || 0} Qty<br>
-				Total Taxable Amount: ₹${row.delivery_note.total_taxable_amount || '0.00'}<br>
-				Total Amount: ₹${row.delivery_note.total_amount || '0.00'}<br><br>
+				Total Taxable Amount: Rs.${row.delivery_note.total_taxable_amount || '0.00'}<br>
+				Total Amount: Rs.${row.delivery_note.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-customer="${row.customer_code}" 
 					data-doctype="Delivery Note" 
@@ -161,10 +161,10 @@ frappe.pages['customer-insights'].on_page_load = function(wrapper) {
 			row.sales_invoice 
 				? `Total Records: ${row.sales_invoice.total_records || 0}<br>
 				Total Qty: ${row.sales_invoice.total_qty || 0} Qty<br>
-				Total Taxable Amount: ₹${row.sales_invoice.total_taxable_amount || '0.00'}<br>
-				Total Amount: ₹${row.sales_invoice.total_amount || '0.00'}<br>
-				Total Paid Amount: ₹${row.sales_invoice.paid_amount || '0.00'}<br>
-				Total Pending Amount: ₹${row.sales_invoice.pending_amount || '0.00'}<br><br>
+				Total Taxable Amount: Rs.${row.sales_invoice.total_taxable_amount || '0.00'}<br>
+				Total Amount: Rs.${row.sales_invoice.total_amount || '0.00'}<br>
+				Total Paid Amount: Rs.${row.sales_invoice.paid_amount || '0.00'}<br>
+				Total Pending Amount: Rs.${row.sales_invoice.pending_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-customer="${row.customer_code}" 
 					data-doctype="Sales Invoice" 
@@ -179,7 +179,7 @@ frappe.pages['customer-insights'].on_page_load = function(wrapper) {
 			// Update Payment Request Details
 			row.payment_request 
 				? `Total Records: ${row.payment_request.total_records || 0}<br>
-				Total Amount: ₹${row.payment_request.total_amount || '0.00'}<br><br>
+				Total Amount: Rs.${row.payment_request.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-customer="${row.customer_code}" 
 					data-doctype="Payment Request" 
@@ -193,7 +193,7 @@ frappe.pages['customer-insights'].on_page_load = function(wrapper) {
 			// Update Payment Entry Details
 			row.payment_entry 
 				? `Total Records: ${row.payment_entry.total_records || 0}<br>
-				Total Amount: ₹${row.payment_entry.total_amount || '0.00'}<br><br>
+				Total Amount: Rs.${row.payment_entry.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-customer="${row.customer_code}" 
 					data-doctype="Payment Entry" 
