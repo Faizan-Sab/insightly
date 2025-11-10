@@ -127,8 +127,8 @@ frappe.pages['supplier-insights'].on_page_load = function(wrapper) {
 			row.purchase_order
 				? `Total Records: ${row.purchase_order.total_records || 0}<br>
 				Total Order Qty: ${row.purchase_order.total_qty || 0} Qty<br>
-				Total Taxable Amount: Rs.${row.purchase_order.total_taxable_amount || '0.00'}<br>
-				Total Amount: Rs.${row.purchase_order.total_amount || '0.00'}<br><br>
+				Total Taxable Amount: ₹${row.purchase_order.total_taxable_amount || '0.00'}<br>
+				Total Amount: ₹${row.purchase_order.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-supplier="${row.supplier_code}" 
 					data-doctype="Purchase Order" 
@@ -144,8 +144,8 @@ frappe.pages['supplier-insights'].on_page_load = function(wrapper) {
 			row.purchase_receipt 
 				? `Total Records: ${row.purchase_receipt.total_records || 0}<br>
 				Total Received Qty: ${row.purchase_receipt.total_qty || 0} Qty<br>
-				Total Taxable Amount: Rs.${row.purchase_receipt.total_taxable_amount || '0.00'}<br>
-				Total Amount: Rs.${row.purchase_receipt.total_amount || '0.00'}<br><br>
+				Total Taxable Amount: ₹${row.purchase_receipt.total_taxable_amount || '0.00'}<br>
+				Total Amount: ₹${row.purchase_receipt.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-supplier="${row.supplier_code}" 
 					data-doctype="Purchase Receipt" 
@@ -161,10 +161,10 @@ frappe.pages['supplier-insights'].on_page_load = function(wrapper) {
 			row.purchase_invoice 
 				? `Total Records: ${row.purchase_invoice.total_records || 0}<br>
 				Total Qty: ${row.purchase_invoice.total_qty || 0} Qty<br>
-				Total Taxable Amount: Rs.${row.purchase_invoice.total_taxable_amount || '0.00'}<br>
-				Total Amount: Rs.${row.purchase_invoice.total_amount || '0.00'}<br>
-				Total Paid Amount: Rs.${row.purchase_invoice.paid_amount || '0.00'}<br>
-				Total Pending Amount: Rs.${row.purchase_invoice.pending_amount || '0.00'}<br><br>
+				Total Taxable Amount: ₹${row.purchase_invoice.total_taxable_amount || '0.00'}<br>
+				Total Amount: ₹${row.purchase_invoice.total_amount || '0.00'}<br>
+				Total Paid Amount: ₹${row.purchase_invoice.paid_amount || '0.00'}<br>
+				Total Pending Amount: ₹${row.purchase_invoice.pending_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-supplier="${row.supplier_code}" 
 					data-doctype="Purchase Invoice" 
@@ -179,7 +179,7 @@ frappe.pages['supplier-insights'].on_page_load = function(wrapper) {
 			// Update Payment Request Details
 			row.payment_request 
 				? `Total Records: ${row.payment_request.total_records || 0}<br>
-				Total Amount: Rs.${row.payment_request.total_amount || '0.00'}<br><br>
+				Total Amount: ₹${row.payment_request.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-supplier="${row.supplier_code}" 
 					data-doctype="Payment Request" 
@@ -193,7 +193,7 @@ frappe.pages['supplier-insights'].on_page_load = function(wrapper) {
 			// Update Payment Entry Details
 			row.payment_entry 
 				? `Total Records: ${row.payment_entry.total_records || 0}<br>
-				Total Amount: Rs.${row.payment_entry.total_amount || '0.00'}<br><br>
+				Total Amount: ₹${row.payment_entry.total_amount || '0.00'}<br><br>
 				<button class="btn btn-secondary details-btn" 
 					data-supplier="${row.supplier_code}" 
 					data-doctype="Payment Entry" 
